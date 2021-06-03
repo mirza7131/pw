@@ -2,26 +2,23 @@
 //     self.registration.sendNotification('test message',{})
 // })
 
-
-self.addEventListener('install', event => {
-    console.log('V1 installing…');
-  
-    // cache a cat SVG
-    event.waitUntil(
-      caches.open('static-v1').then(cache => cache.add('/cat.svg'))
-    );
-  });
-  
-  self.addEventListener('activate', event => {
-    console.log('V1 now ready to handle fetches!');
-  });
-  
-  self.addEventListener('fetch', event => {
-    const url = new URL(event.request.url);
-  
-    // serve the cat SVG from the cache if the request is
-    // same-origin and the path is '/dog.svg'
-    if (url.origin == location.origin && url.pathname == '/dog.svg') {
-      event.respondWith(caches.match('/cat.svg'));
-    }
-  });
+self.addEventListener('push', function(e) {
+    var options = {
+        body: 'this notification was generated from push ',
+        icon: 'images/checkmark.png',
+        vibrate: [100, 50, 100],
+        date: {
+            dateOfArrival: Date.now(),
+            primaryKey: '2'
+        },
+        actions: [
+            {
+                action: 'explore',
+                title: 'Explore this new world',
+                icone: 'images/checkmark.png'
+            },
+            { action: 'Close', title: 'Close' , icon: 'images/xmark.png'}
+        ]
+    };
+    e.waitUntil(self.registration.showNotification('Hello world', options))
+})
