@@ -1,6 +1,3 @@
-// self.addEventListener('push',() => {
-//     self.registration.sendNotification('test message',{})
-// })
 
 self.addEventListener('push', function(e) {
     var options = {
