@@ -8,7 +8,7 @@ self.addEventListener('push', function(e) {
         primaryKey: '10'
       },
       actions: [
-        {action: 'https://www.google.com/', title: 'Explore this new world',
+        {action: 'www.google.com', title: 'Explore this new world',
           icon: 'images/checkmark.png'},
         {action: 'close', title: 'Close',
           icon: 'images/xmark.png'},
