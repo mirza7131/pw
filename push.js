@@ -6,7 +6,7 @@ let vapidkey = {
   }
 
 
-  push.setVapidDetails('mailto:test@code.co.uk', vapidkey.publicKey,vapidkey.privateKey)
+  push.setVapidDetails('mailto:mirzaaahsan@gmail.com', vapidkey.publicKey,vapidkey.privateKey)
 
   let sub = 
   {endpoint:"https://fcm.googleapis.com/fcm/send/evZihAkrV0E:APA91bGBmvvPNOz08LfBA0Fj386GSZHKzvtkl6kCvInTy30zUSpTyZrQ9jG28LDfjW2heeA9ORK9JLNLYoFAddXfzW3LcuCYnfmvCZxFqazaieAnmMnx_sgSjqyHs3iOOkUtUIP5Dsf9",
