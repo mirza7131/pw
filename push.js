@@ -6,7 +6,7 @@ let vapidkey = {
   }
 
 
-  push.setVapidDetails('mailto:mirzaaahsan@gmail.com', vapidkey.publicKey,vapidkey.privateKey)
+  push.setVapidDetails('mailto:mehranansar564@gmail.com', vapidkey.publicKey,vapidkey.privateKey)
 
   let sub = 
   {
@@ -14,6 +14,11 @@ let vapidkey = {
   expirationTime:null,
   keys:{p256dh:"BPVGrmIdkoMugyIy7edDua7u4XsJbtfI05ZlK5A9hUc2R9gwNFW5IzhCoCGOi8W1hvEixmDxr6boEmgMqnkrKPo",
   auth:"jEit-PDOv7lY4WJurrdxJg"}}
+  // {endpoint:"https://fcm.googleapis.com/fcm/send/eId2AYwiu1A:APA91bHrceYFGJQjxVC87LHotgv85ynCtNU4ZKiJo1CMUZm4_RyTQxsvrWl72gQdKvGq21Xhno_aSuwZosLeRKW4HHdABGx6a5_X6AfQdEgK-sYiigTryptWY6gEtiA6quPMc0iqKbE1",
+  // expirationTime:null,
+  // keys:{
+  //   p256dh:"BHp5gQPtQiRk5ENn-BLNl1KFvDM5Wc7gtzk_sqWk2xVnkFqBcXI43vffWYzOIfZcNUtJ7aUXv92JbbvEFu9vMCg",
+  // auth:"J18GLXedVibv7LT1mQi7OQ"}}
 
   push.sendNotification(sub,'test message');
-  console.log(  push.sendNotification(sub,'test message'),'okk')
+  console.log(  'okk')

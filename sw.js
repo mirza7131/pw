@@ -15,6 +15,6 @@ self.addEventListener('push', function(e) {
       ]
     };
     e.waitUntil(
-      self.registration.showNotification('Hello Mehran What are you doing..?', options)
+      self.registration.showNotification('Hello Umar..! What are you doing..?', options)
     );
   });
