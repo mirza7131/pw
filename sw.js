@@ -8,7 +8,7 @@ self.addEventListener('push', function(e) {
         primaryKey: '10'
       },
       actions: [
-        {action: 'www.google.com', title: 'Explore this new world',
+        {action: 'explore', title: 'Explore this new world',
           icon: 'images/checkmark.png'},
         {action: 'close', title: 'Close',
           icon: 'images/xmark.png'},
@@ -18,3 +18,12 @@ self.addEventListener('push', function(e) {
       self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options)
     );
   });
+
+  
+  if (action === 'close') {
+    notification.close();
+  } else {
+    clients.openWindow('http://www.google.com');
+    notification.close();
+  }
+  clients.openWindow('http://www.google.com');
