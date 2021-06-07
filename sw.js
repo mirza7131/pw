@@ -19,6 +19,8 @@ self.addEventListener('push', function(e) {
     );
   });
 
+  var action = e.action;
+
   
   if (action === 'close') {
     notification.close();
