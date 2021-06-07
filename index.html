@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "ecac82cd-5b1a-4b7e-8384-932b64345689",
+          notifyButton: {
+            enable: true,
+          },
+        });
+      });
+    </script>
+
+
 </head>
 <body>
     <button onclick="subscribe()" >Subscribe</button>
