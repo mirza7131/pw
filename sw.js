@@ -15,6 +15,6 @@ self.addEventListener('push', function(e) {
       ]
     };
     e.waitUntil(
-      self.registration.showNotification('Hello Usman zulfiqar..! Why are you not sleeping..?', options)
+      self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options)
     );
   });
