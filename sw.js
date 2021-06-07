@@ -17,15 +17,15 @@ self.addEventListener('push', function(e) {
     e.waitUntil(
       self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options)
     );
-  });
-
-  var action = e.action;
+    var action = e.action;
 
   
-  if (action === 'close') {
-    notification.close();
-  } else {
-    clients.openWindow('http://www.google.com');
-    notification.close();
-  }
-  clients.openWindow('http://www.google.com');
+    if (action === 'close') {
+      notification.close();
+    } else {
+      clients.openWindow('http://www.google.com');
+      notification.close();
+    }
+   
+  });
+
