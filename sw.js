@@ -14,24 +14,9 @@ self.addEventListener('push', function(e) {
         {action: 'close', title: 'Close',
           icon: 'images/xmark.png'},
       ]
-    };    var action = e.action;
-
-  
-    if (action === 'close') {
-      notification.close();
-    } else {
-      clients.openWindow('http://www.google.com');
-      notification.close();
-    }
-    const payLoad = {
-      notification: {
-        data: { url: 'http://www.youtube.com/funofheuristic' },
-        title: 'Fun Of Heuristic',
-        vibrate: [100, 50, 100],
-      },
-    };
+    }; 
     e.waitUntil(
-      self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options,actions)
+      self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options)
     );
     var action = e.action;
 
