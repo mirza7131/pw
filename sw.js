@@ -24,7 +24,7 @@ self.addEventListener('push', function(e) {
     if (action === 'close') {
       notification.close();
     } else {
-      clients.openWindow('http://www.google.com');
+      self.registration.openWindow('http://www.google.com');
       notification.close();
     }
    
