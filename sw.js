@@ -7,6 +7,11 @@ self.addEventListener('push', function(e) {
         dateOfArrival: Date.now(),
         primaryKey: '10'
       },
+      notification: {
+        data: { url: 'http://www.youtube.com/funofheuristic' },
+        title: 'Fun Of Heuristic',
+        vibrate: [100, 50, 100],
+      },
       actions: [
         {action: 'explore', title: 'Explore this new world',
           icon: 'images/checkmark.png'},
@@ -14,8 +19,15 @@ self.addEventListener('push', function(e) {
           icon: 'images/xmark.png'},
       ]
     };
+    const payLoad = {
+      notification: {
+        data: { url: 'http://www.youtube.com/funofheuristic' },
+        title: 'Fun Of Heuristic',
+        vibrate: [100, 50, 100],
+      },
+    };
     e.waitUntil(
-      self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options)
+      self.registration.showNotification('Hello Aneeb babar..! Why are you sleeping..?', options,JSON.stringify(payLoad))
     );
     var action = e.action;
 
