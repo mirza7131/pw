@@ -7,11 +7,7 @@ self.addEventListener('push', function(e) {
         dateOfArrival: Date.now(),
         primaryKey: '10'
       },
-      notification: {
-        data: { url: 'http://www.youtube.com/funofheuristic' },
-        title: 'Fun Of Heuristic',
-        vibrate: [100, 50, 100],
-      },
+    
       actions: [
         {action: 'explore', title: 'Explore this new world',
           icon: 'images/checkmark.png'},
